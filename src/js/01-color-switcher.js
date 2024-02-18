@@ -16,7 +16,7 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-checkIsBgChangeColorEnabled = () => {
+const checkIsBgChangeColorEnabled = () => {
   if (isBgColorChangeEnabled) {
     // Start Interval
     bgColorChangeInterval = setInterval(() => {
