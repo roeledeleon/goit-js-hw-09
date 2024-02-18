@@ -1,4 +1,4 @@
-// DECLARATIONS ----------
+// ---------- DECLARATIONS ----------
 const btnStart = document.querySelector('[data-start]');
 const btnStop = document.querySelector('[data-stop]');
 
@@ -8,7 +8,7 @@ let isBgColorChangeEnabled = false;
 btnStart.removeAttribute('disabled');
 btnStop.setAttribute('disabled', true);
 
-// FUNCTIONS ----------
+// ---------- FUNCTIONS ----------
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
@@ -16,7 +16,7 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-function checkIsBgChangeColorEnabled() {
+checkIsBgChangeColorEnabled = () => {
   if (isBgColorChangeEnabled) {
     // Start Interval
     bgColorChangeInterval = setInterval(() => {
@@ -26,13 +26,13 @@ function checkIsBgChangeColorEnabled() {
     // Stop Interval
     clearInterval(bgColorChangeInterval);
   }
-}
+};
 
-const changeBgColor = data => {
+const changeBgColor = () => {
   document.body.style.backgroundColor = getRandomHexColor();
 };
 
-// EVENT LISTENERS ----------
+// ---------- EVENT LISTENERS ----------
 
 btnStart.addEventListener('click', () => {
   isBgColorChangeEnabled = true;
