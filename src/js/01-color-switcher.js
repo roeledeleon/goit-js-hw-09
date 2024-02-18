@@ -2,8 +2,8 @@
 const btnStart = document.querySelector('[data-start]');
 const btnStop = document.querySelector('[data-stop]');
 
-bgColorChangeInterval = null;
-isBgColorChangeEnabled = false;
+let bgColorChangeInterval = null;
+let isBgColorChangeEnabled = false;
 
 btnStart.removeAttribute('disabled');
 btnStop.setAttribute('disabled', true);
