@@ -36,6 +36,7 @@ const optionsFlatPicker = {
 
     if (targetDate <= Date.now()) {
       btnStart.disabled = true;
+      //window.alert('Please choose a date in the future');
       Notify.failure('Please choose a date in the future');
       return;
     }
